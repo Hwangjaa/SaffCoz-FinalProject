@@ -127,7 +127,6 @@ button:hover {
     background-color: #28365c;
 }
 
-/* Gender Selection Styling */
 .gender-group {
     display: flex;
     flex-direction: column;
@@ -159,7 +158,6 @@ button:hover {
         font-size: 14px;
     }
 }
-
 
 /* Footer */
 .footer {
