@@ -1,0 +1,381 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.navbar {
+    background-color: #293144;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    position: relative;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d1d1d1;
+}
+
+/* Body */
+.body-container {
+    background-color: #1d2028;
+    color: white;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 32px;
+
+    font-weight: bold;
+    margin-bottom: 30px;
+
+    color: white;
+}
+
+.product-grid {
+    display: flex;
+    gap: 30px;
+
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-item img {
+    width: 350px;
+
+    height: 250px;
+
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.product-highlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+    margin: 20px auto;
+
+    max-width: 80%;
+
+}
+
+.highlight-item {
+    text-align: center;
+    flex: 1;
+
+    max-width: 35%;
+
+}
+
+.highlight-item h2 {
+    font-size: 20px;
+
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.highlight-image {
+    position: relative;
+    display: block;
+    border-radius: 15px;
+
+    overflow: hidden;
+    width: 100%;
+
+    aspect-ratio: 4/3;
+}
+
+.highlight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.highlight-image:hover img {
+    transform: scale(1.1);
+}
+
+.discount-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: orange;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .product-highlight {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .highlight-item {
+        max-width: 90%;
+    }
+
+    .highlight-image {
+        aspect-ratio: 1/1;
+    }
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    position: relative;
+}
+
+.product-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: orange;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.other-products .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    position: relative;
+    flex: 1 1 calc(33.33% - 20px);
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.sale-price {
+    color: red;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 5px;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.badge.new {
+    background-color: green;
+}
+
+.badge.sale {
+    background-color: orange;
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #1d2028;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #d1d1d1;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #d1d1d1;
+}
+
+.footer-section p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #d1d1d1;
+}

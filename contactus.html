@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="/asset/headinglogo.png" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="/homepage.html">Home</a></li>
+            <li><a href="/productpage.html">Product</a></li>
+            <li><a href="/storelocation.html">Store</a></li>
+            <li><a href="/aboutus.html">About Us</a></li>
+            <li><a href="/contactus.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- body -->
+    <div class="container">
+        <div class="contact-info">
+            <img src="/asset/contactus/Contact Us.png" alt="Contact Card" class="contact-card">
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <p>Any question or remarks? Just write us a message!</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" name="firstName" placeholder="First Name" required>
+                    <input type="text" name="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group gender-group">
+                    <label>Select Gender?</label>
+                    <div class="gender-option">
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="gender-option">
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+
+                <textarea name="message" placeholder="Write your message.." required></textarea>
+                <div class="form-group">
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">Get the latest news, exclusive deals, and information about new products in
+                        your inbox!</label>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <script src="/javascript/contactus.js"></script>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/asset/headinglogo.png" alt="Footer Logo">
+                <p>SaffCo.Z</p>
+            </div>
+            <div class="footer-section">
+                <h3>Learn More</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>E-Commerce</h3>
+                <ul>
+                    <li><a href="#">Tokopee</a></li>
+                    <li><a href="#">Shopedia</a></li>
+                    <li><a href="#">Lazanya</a></li>
+                    <li><a href="#">Openlapak</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Pre-Order: 081234567890</p>
+                <p>Complains: 081234567890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Social</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank" class="icon">
+                        <img src="/asset/footer/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" target="_blank" class="icon">
+                        <img src="/asset/footer/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" target="_blank" class="icon">
+                        <img src="/asset/footer/twitter.png" alt="Twitter">
+                    </a>
+                    <a href="#" target="_blank" class="icon">
+                        <img src="/asset/footer/youtube.png" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
