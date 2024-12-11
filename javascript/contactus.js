@@ -1,7 +1,7 @@
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
 
     const firstName = event.target.firstName.value.trim();
     const lastName = event.target.lastName.value.trim();
@@ -20,10 +20,7 @@ document
       return;
     }
 
-    if (
-      phone === "" ||
-      phone.length < 10 ||
-      phone.length > 13 ||
+    if (phone === "" || phone.length < 10 || phone.length > 13 ||
       isNaN(phone)
     ) {
       alert("Please enter a valid phone number.");
@@ -41,4 +38,5 @@ document
     }
 
     alert("Your message has been sent successfully!");
+    event.target.reset();
   });
