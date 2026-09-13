@@ -55,21 +55,39 @@
 
     <main id="main">
 
-        <!-- Hero -->
-        <section class="hero">
-            <div class="hero-media">
-                <img src="asset/aboutus/images_7sw91t3M_Y36XP4.jpg" alt="" aria-hidden="true">
-            </div>
-            <div class="container hero-inner">
-                <p class="eyebrow on-dark">Since the Beginning</p>
-                <h1>SaffCoz</h1>
-                <p class="lede">
-                    &ldquo;Fragrance is the silent language of the soul. It speaks when words cannot.&rdquo;
-                </p>
-                <div class="btn-row">
-                    <a href="contactus.html" class="btn btn-light">Contact Us</a>
-                    <a href="productpage.html" class="btn btn-ghost-light">Our Products</a>
+        <!-- Hero: light editorial split -->
+        <section class="hero-editorial">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Since the Beginning</p>
+                    <h1>SaffCoz</h1>
+                    <p class="quote-lede">&ldquo;Fragrance is the silent language of the soul. It speaks when words
+                        cannot.&rdquo;</p>
+                    <p class="lede">Unveil the artistry of perfumery — signature scents crafted with intention, and
+                        collaborations with the world&rsquo;s most celebrated perfume houses.</p>
+                    <div class="btn-row">
+                        <a href="productpage.html" class="btn btn-primary">Our Products</a>
+                        <a href="contactus.html" class="btn btn-outline">Contact Us</a>
+                    </div>
+                    <dl class="stats-row">
+                        <div>
+                            <dt>20+</dt>
+                            <dd>Signature scents</dd>
+                        </div>
+                        <div>
+                            <dt>16</dt>
+                            <dd>Collaborations</dd>
+                        </div>
+                        <div>
+                            <dt>3</dt>
+                            <dd>Boutiques</dd>
+                        </div>
+                    </dl>
                 </div>
+                <figure class="hero-figure">
+                    <img src="asset/aboutus/e8e271c7f5a2c589a8c690361f119b5d.jpg"
+                        alt="A SaffCoz fragrance bottle held in hand">
+                </figure>
             </div>
         </section>
 
@@ -80,14 +98,16 @@
             <p class="section-sub">Three originals that define the house of SaffCoz.</p>
             <div class="product-grid">
                 <article class="product-card">
-                    <div class="product-media" data-open="saff">
+                    <div class="product-media" data-open="sotb" role="button" tabindex="0"
+                        aria-label="View details for SaffCoz S.O.T.B">
                         <div class="product-tags"><span class="tag new">New</span></div>
-                        <button class="wish-btn" type="button" data-id="saff" data-name="SaffCoz. — S.O.T.B"
+                        <button class="wish-btn" type="button" data-id="sotb" data-name="SaffCoz. — S.O.T.B"
                             aria-label="Add SaffCoz S.O.T.B to wishlist" aria-pressed="false">
                             <svg class="heart-outline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z" stroke-linejoin="round"/></svg>
                             <svg class="heart-fill" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z"/></svg>
                         </button>
-                        <img src="asset/aboutus/9e3284917896ff9c4d1ba4db57ffdd83.jpg" alt="SaffCoz S.O.T.B perfume bottle">
+                        <img src="asset/aboutus/9e3284917896ff9c4d1ba4db57ffdd83.jpg"
+                            alt="SaffCoz S.O.T.B perfume bottle" loading="lazy">
                     </div>
                     <div class="product-info">
                         <p class="product-brand">SaffCoz</p>
@@ -96,16 +116,20 @@
                             floral undertones — elegance and warmth that lingers without overwhelming.</p>
                         <div class="product-price"><span class="price-now">Rp 380.000</span></div>
                     </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary" type="button" data-open="sotb">View</button>
+                    </div>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-media" data-open="minouet">
+                    <div class="product-media" data-open="minouet" role="button" tabindex="0"
+                        aria-label="View details for SaffCoz MINOUET">
                         <button class="wish-btn" type="button" data-id="minouet" data-name="SaffCoz. — MINOUET"
                             aria-label="Add SaffCoz MINOUET to wishlist" aria-pressed="false">
                             <svg class="heart-outline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z" stroke-linejoin="round"/></svg>
                             <svg class="heart-fill" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z"/></svg>
                         </button>
-                        <img src="asset/aboutus/minouet.jpeg" alt="SaffCoz MINOUET perfume bottle">
+                        <img src="asset/aboutus/minouet.jpeg" alt="SaffCoz MINOUET perfume bottle" loading="lazy">
                     </div>
                     <div class="product-info">
                         <p class="product-brand">SaffCoz</p>
@@ -114,17 +138,22 @@
                             citrus — grace and lightness for understated, captivating moments.</p>
                         <div class="product-price"><span class="price-now">Rp 240.000</span></div>
                     </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary" type="button" data-open="minouet">View</button>
+                    </div>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-media" data-open="maleali">
+                    <div class="product-media" data-open="maleali" role="button" tabindex="0"
+                        aria-label="View details for SaffCoz MALEALI">
                         <div class="product-tags"><span class="tag sale">Sale</span></div>
                         <button class="wish-btn" type="button" data-id="maleali" data-name="SaffCoz. — MALEALI"
                             aria-label="Add SaffCoz MALEALI to wishlist" aria-pressed="false">
                             <svg class="heart-outline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z" stroke-linejoin="round"/></svg>
                             <svg class="heart-fill" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z"/></svg>
                         </button>
-                        <img src="asset/aboutus/id-11134207-7r98x-lpf0ard41d3nf9.jpg" alt="SaffCoz MALEALI perfume bottle">
+                        <img src="asset/aboutus/id-11134207-7r98x-lpf0ard41d3nf9.jpg"
+                            alt="SaffCoz MALEALI perfume bottle" loading="lazy">
                     </div>
                     <div class="product-info">
                         <p class="product-brand">SaffCoz</p>
@@ -136,6 +165,9 @@
                             <span class="price-old">Rp 450.000</span>
                         </div>
                     </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary" type="button" data-open="maleali">View</button>
+                    </div>
                 </article>
             </div>
         </section>
@@ -144,7 +176,8 @@
         <section class="split-band">
             <div class="container split-inner">
                 <div class="split-media">
-                    <img src="asset/aboutus/4de85956860e3c066893dea8ed6435d1.jpg" alt="Perfume atelier ingredients">
+                    <img src="asset/aboutus/4de85956860e3c066893dea8ed6435d1.jpg"
+                        alt="Perfume atelier ingredients" loading="lazy">
                 </div>
                 <div class="split-text">
                     <p class="eyebrow">Featured</p>
@@ -158,28 +191,58 @@
             </div>
         </section>
 
-        <!-- Vision & Mission -->
+        <!-- What we stand for -->
         <section class="section container">
-            <p class="eyebrow text-center">What Drives Us</p>
-            <h2 class="section-title text-center">Don&rsquo;t Miss</h2>
-            <div class="vm-grid">
-                <div class="vm-media">
-                    <img src="asset/aboutus/57bd47d826539fc69df152d5f0259d3f.jpg" alt="Vision — ingredients of a fine perfume">
-                </div>
-                <div class="vm-card">
-                    <h3>Vision</h3>
-                    <p>To become a globally recognized fragrance brand known for premium, luxurious perfumes that
-                        inspire confidence and individuality — making fine fragrances accessible while celebrating
-                        the art of perfume, and building lasting connections that elevate everyday moments.</p>
-                </div>
-                <div class="vm-card">
-                    <h3>Mission</h3>
-                    <p>To provide high-quality, unique fragrances that capture the essence of sophistication, with
-                        exceptional customer service and a seamless shopping experience — ensuring every bottle
-                        tells a story and enhances the personal style of our clientele.</p>
-                </div>
-                <div class="vm-media">
-                    <img src="asset/aboutus/e8e271c7f5a2c589a8c690361f119b5d.jpg" alt="Mission — the perfumer's craft">
+            <p class="eyebrow text-center">The House</p>
+            <h2 class="section-title text-center">What We Stand For</h2>
+            <div class="craft-grid">
+                <article class="craft-item">
+                    <span class="craft-num">01</span>
+                    <h3>Craftsmanship</h3>
+                    <p>Tradition blended with innovation — every scent profile is explored and refined until it earns
+                        its place in the collection.</p>
+                </article>
+                <article class="craft-item">
+                    <span class="craft-num">02</span>
+                    <h3>Uncompromising Quality</h3>
+                    <p>High-quality, distinctive fragrances that capture the essence of sophistication — never
+                        ordinary, never mass-produced.</p>
+                </article>
+                <article class="craft-item">
+                    <span class="craft-num">03</span>
+                    <h3>Service &amp; Access</h3>
+                    <p>Exceptional service and a seamless shopping experience, because fine fragrance should feel
+                        personal from first spritz to doorstep.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Vision & Mission -->
+        <section class="vm-band">
+            <div class="container">
+                <p class="eyebrow text-center">What Drives Us</p>
+                <h2 class="section-title text-center">Don&rsquo;t Miss</h2>
+                <div class="vm-grid">
+                    <div class="vm-media">
+                        <img src="asset/aboutus/57bd47d826539fc69df152d5f0259d3f.jpg"
+                            alt="Ingredients of a fine perfume" loading="lazy">
+                    </div>
+                    <div class="vm-card">
+                        <h3>Vision</h3>
+                        <p>To become a globally recognized fragrance brand known for premium, luxurious perfumes that
+                            inspire confidence and individuality — making fine fragrances accessible while celebrating
+                            the art of perfume, and building lasting connections that elevate everyday moments.</p>
+                    </div>
+                    <div class="vm-card">
+                        <h3>Mission</h3>
+                        <p>To provide high-quality, unique fragrances that capture the essence of sophistication, with
+                            exceptional customer service and a seamless shopping experience — ensuring every bottle
+                            tells a story and enhances the personal style of our clientele.</p>
+                    </div>
+                    <div class="vm-media">
+                        <img src="asset/aboutus/e8e271c7f5a2c589a8c690361f119b5d.jpg"
+                            alt="The perfumer's craft" loading="lazy">
+                    </div>
                 </div>
             </div>
         </section>
@@ -204,15 +267,18 @@
                 <h2 class="section-title text-center">In Collaborations</h2>
                 <div class="collab-grid">
                     <figure class="collab-item">
-                        <img src="asset/aboutus/d3eec660181d490e050a9523ec8ddfac.jpg" alt="Dion collaboration">
+                        <img src="asset/aboutus/d3eec660181d490e050a9523ec8ddfac.jpg" alt="Dion collaboration"
+                            loading="lazy">
                         <figcaption class="brand">Dion</figcaption>
                     </figure>
                     <figure class="collab-item">
-                        <img src="asset/aboutus/808d7f8af18f2b61bcc6e7267a8c55d7.jpg" alt="YXL collaboration">
+                        <img src="asset/aboutus/808d7f8af18f2b61bcc6e7267a8c55d7.jpg" alt="YXL collaboration"
+                            loading="lazy">
                         <figcaption class="brand">YXL</figcaption>
                     </figure>
                     <figure class="collab-item">
-                        <img src="asset/aboutus/9ff8c785aa6aa8a23212a48471fed976.jpg" alt="Atkindaughter collaboration">
+                        <img src="asset/aboutus/9ff8c785aa6aa8a23212a48471fed976.jpg"
+                            alt="Atkindaughter collaboration" loading="lazy">
                         <figcaption class="brand">Atkindaughter</figcaption>
                     </figure>
                 </div>
