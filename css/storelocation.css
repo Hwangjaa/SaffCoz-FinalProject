@@ -10,7 +10,7 @@
     grid-template-columns: 1fr 1.4fr;
     gap: 32px;
     margin-top: 44px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .store-list {
@@ -75,6 +75,16 @@
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
     padding: 14px;
+}
+
+@media (min-width: 861px) {
+    /* let the map fill the column so both sides end level */
+    .map-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .map-container img { flex: 1; height: 100%; }
 }
 
 .map-container img {
