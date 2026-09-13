@@ -1118,6 +1118,27 @@ a { color: inherit; }
 
 .skip-link:focus { left: 0; }
 
+/* Touch devices: expand every small control to the 44px target guideline */
+@media (pointer: coarse) {
+    .qty-row button,
+    .cart-close,
+    .modal-close,
+    .wish-btn,
+    .nav-icon-btn,
+    .nav-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .qty-row .qty-val { min-width: 40px; }
+
+    .variant-btn,
+    .store-item,
+    .radio-pill {
+        min-height: 44px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
