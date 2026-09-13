@@ -1,12 +1,6 @@
-/* SaffCoz — product page: search, filter, sort, render */
+/* SaffCoz — homepage rendering */
 (function () {
     'use strict';
-
-    var state = {
-        query: '',
-        filter: 'all',
-        sort: 'featured'
-    };
 
     function productCard(p) {
         var tags = '';
@@ -14,7 +8,7 @@
         if (p.badge === 'sale') tags = '<span class="tag sale">Sale</span>';
         if (p.badge === 'best') tags = '<span class="tag">Best Seller</span>';
 
-        var priceHtml;
+        var priceHtml = '';
         if (p.oldPrice) {
             priceHtml = '<span class="price-sale">' + SaffCoz.rupiah(p.price) + '</span>' +
                         '<span class="price-old">' + SaffCoz.rupiah(p.oldPrice) + '</span>';
@@ -44,38 +38,33 @@
         );
     }
 
-    function applyState(list) {
-        var q = state.query.trim().toLowerCase();
-        var out = list.filter(function (p) {
-            if (q && (p.name + ' ' + p.brand).toLowerCase().indexOf(q) === -1) return false;
-            if (state.filter === 'sale') return !!p.oldPrice;
-            if (state.filter !== 'all' && p.gender !== state.filter) return false;
-            return true;
-        });
-
-        if (state.sort === 'price-asc') out.sort(function (a, b) { return a.price - b.price; });
-        if (state.sort === 'price-desc') out.sort(function (a, b) { return b.price - a.price; });
-        if (state.sort === 'name') out.sort(function (a, b) { return a.name.localeCompare(b.name); });
-
-        return out;
-    }
-
     function byId(id) {
         return window.SAFFCOZ_PRODUCTS.filter(function (p) { return p.id === id; })[0];
     }
 
-    function render() {
-        var grid = document.getElementById('product-grid');
-        var empty = document.getElementById('empty-state');
-        var meta = document.getElementById('results-meta');
-        var list = applyState(window.SAFFCOZ_PRODUCTS);
+    document.addEventListener('DOMContentLoaded', function () {
+        var newGrid = document.getElementById('new-arrivals-grid');
+        var allGrid = document.getElementById('all-products-grid');
+        if (!newGrid || !allGrid) return;
 
-        grid.innerHTML = list.map(productCard).join('');
-        grid.hidden = list.length === 0;
-        empty.hidden = list.length !== 0;
-        meta.textContent = list.length === 0 ? '' :
-            list.length + (list.length === 1 ? ' fragrance' : ' fragrances');
+        var products = window.SAFFCOZ_PRODUCTS;
+        var arrivals = ['saffcozsaff', 'laspozaz', 'troupe'].map(function (id) { return byId(id); })
+            .filter(Boolean);
 
+        // New arrivals use dedicated imagery not present in the catalogue —
+        // build display-only cards for them.
+        if (arrivals.length === 0) {
+            arrivals = [
+                { id: 'x-saff', brand: 'SaffCoz', name: 'SaffCoz. — SAFF', price: 215500, img: 'asset/homepage/saffcozsaff.jpeg', badge: 'new' },
+                { id: 'x-lasp', brand: 'SaffCoz', name: 'SaffCoz. — Laspozaz', price: 320000, img: 'asset/homepage/laspozaz.jpeg', badge: 'new' },
+                { id: 'x-trp', brand: 'SaffCoz', name: 'SaffCoz. — Troupe', price: 410000, img: 'asset/homepage/troupe.jpeg', badge: 'new' }
+            ];
+        }
+
+        newGrid.innerHTML = arrivals.map(function (p) { return productCard(p); }).join('');
+        allGrid.innerHTML = products.map(function (p) { return productCard(p); }).join('');
+
+        // wire open buttons
         document.querySelectorAll('[data-open]').forEach(function (el) {
             var pid = el.getAttribute('data-open');
             function open() {
@@ -92,57 +81,5 @@
         });
 
         SaffCoz.syncWishButtons();
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var search = document.getElementById('search-input');
-        var filter = document.getElementById('filter-gender');
-        var sort = document.getElementById('sort-select');
-        var clearBtn = document.getElementById('clear-filters');
-
-        // deep-link: ?p=<id> opens the product modal; ?filter=sale presets filter
-        var params = new URLSearchParams(location.search);
-        var pid = params.get('p');
-        var preset = params.get('filter');
-        if (preset === 'sale') {
-            state.filter = 'sale';
-            filter.value = 'sale';
-        }
-
-        render();
-
-        if (pid) {
-            var p = byId(pid);
-            if (p) SaffCoz.openProductModal(p);
-        }
-
-        var debounce;
-        search.addEventListener('input', function () {
-            clearTimeout(debounce);
-            debounce = setTimeout(function () {
-                state.query = search.value;
-                render();
-            }, 150);
-        });
-
-        filter.addEventListener('change', function () {
-            state.filter = filter.value;
-            render();
-        });
-
-        sort.addEventListener('change', function () {
-            state.sort = sort.value;
-            render();
-        });
-
-        clearBtn.addEventListener('click', function () {
-            state.query = '';
-            state.filter = 'all';
-            state.sort = 'featured';
-            search.value = '';
-            filter.value = 'all';
-            sort.value = 'featured';
-            render();
-        });
     });
 })();

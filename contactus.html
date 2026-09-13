@@ -4,120 +4,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us — SaffCoz</title>
+    <meta name="description" content="Questions or remarks? Write to SaffCoz.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/contactus.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
-    <!-- header -->
-    <div class="navbar">
-        <div class="logo">
-            <img src="/asset/headinglogo.png" alt="Logo" />
-        </div>
-        <ul class="nav-links">
-            <li><a href="/homepage.html">Home</a></li>
-            <li><a href="/productpage.html">Product</a></li>
-            <li><a href="/storelocation.html">Store</a></li>
-            <li><a href="/aboutus.html">About Us</a></li>
-            <li><a href="/contactus.html">Contact Us</a></li>
-        </ul>
-    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- body -->
-    <div class="container">
-        <div class="contact-info">
-            <img src="/asset/contactus/Contact Us.png" alt="Contact Card" class="contact-card">
-        </div>
-        <div class="contact-form">
-            <h2>Contact Us</h2>
-            <p>Any question or remarks? Just write us a message!</p>
-            <form id="contactForm">
-                <div class="form-group">
-                    <input type="text" name="firstName" placeholder="First Name" required>
-                    <input type="text" name="lastName" placeholder="Last Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-                </div>
-                <div class="form-group gender-group">
-                    <label>Select Gender?</label>
-                    <div class="gender-option">
-                        <input type="radio" id="male" name="gender" value="Male" required>
-                        <label for="male">Male</label>
-                    </div>
-                    <div class="gender-option">
-                        <input type="radio" id="female" name="gender" value="Female" required>
-                        <label for="female">Female</label>
-                    </div>
-                </div>
-
-                <textarea name="message" placeholder="Write your message.." required></textarea>
-                <div class="form-group">
-                    <input type="checkbox" id="subscribe" name="subscribe">
-                    <label for="subscribe">Get the latest news, exclusive deals, and information about new products in
-                        your inbox!</label>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
-    <script src="/javascript/contactus.js"></script>
-
-    <!-- footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="/asset/headinglogo.png" alt="Footer Logo">
-                <p>SaffCoz</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Learn More</h3>
-                <ul>
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="homepage.html" class="nav-logo" aria-label="SaffCoz home">
+                <img src="asset/headinglogo.png" alt="SaffCoz logo">
+                <span class="wordmark">SaffCoz</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
+                    aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="productpage.html">Product</a></li>
+                    <li><a href="storelocation.html">Store</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="storelocation.html">Locations</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
+            </nav>
+            <div class="nav-actions">
+                <a class="nav-icon-btn" href="aboutus.html#wishlist" aria-label="Wishlist">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                        <path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="count nav-wish-count">0</span>
+                </a>
+                <button class="nav-icon-btn nav-cart-btn" type="button" aria-label="Open cart">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                        <path d="M6 7h12l1.3 12.2a1.5 1.5 0 0 1-1.5 1.8H6.2a1.5 1.5 0 0 1-1.5-1.8L6 7z" stroke-linejoin="round"/>
+                        <path d="M9 9V6a3 3 0 0 1 6 0v3" stroke-linecap="round"/>
+                    </svg>
+                    <span class="count nav-cart-count">0</span>
+                </button>
             </div>
+        </div>
+    </header>
 
-            <div class="footer-section">
-                <h3>E-Commerce</h3>
-                <ul>
-                    <li><a href="#">Tokopee</a></li>
-                    <li><a href="#">Shopedia</a></li>
-                    <li><a href="#">Lazanya</a></li>
-                    <li><a href="#">Openlapak</a></li>
-                </ul>
+    <main id="main">
+        <section class="page-head">
+            <div class="container">
+                <p class="eyebrow text-center">Get in Touch</p>
+                <h1 class="section-title text-center">Contact Us</h1>
+                <p class="section-sub">Any question or remarks? Just write us a message.</p>
             </div>
+        </section>
 
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Pre-Order: 081234567890</p>
-                <br>
-                <p>Complains: 081234567890</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Social</h3>
-                <div class="social-icons">
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/facebook.png" alt="Facebook">
-                    </a>
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/instagram.png" alt="Instagram">
-                    </a>
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/twitter.png" alt="Twitter">
-                    </a>
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/youtube.png" alt="YouTube">
-                    </a>
+        <section class="container contact-layout">
+            <div class="contact-aside">
+                <img src="asset/contactus/Contact Us.png" alt="SaffCoz contact card">
+                <div class="contact-direct">
+                    <h3>Reach us directly</h3>
+                    <p><span class="label">Pre-Order</span><a href="tel:+6281234567890">0812-3456-7890</a></p>
+                    <p><span class="label">Customer Care</span><a href="tel:+6281234567890">0812-3456-7890</a></p>
+                    <p><span class="label">Visit</span><a href="storelocation.html">Find a boutique &rarr;</a></p>
                 </div>
+            </div>
+
+            <div class="contact-form-card">
+                <h2>Write a Message</h2>
+                <form id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="firstName">First name</label>
+                            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+                            <p class="error-msg">Please enter your first name.</p>
+                        </div>
+                        <div class="field">
+                            <label for="lastName">Last name</label>
+                            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+                            <p class="error-msg">Please enter your last name.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                            <p class="error-msg">Please enter a valid email address.</p>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                            <p class="error-msg">Please enter a valid phone number (10–13 digits).</p>
+                        </div>
+                    </div>
+
+                    <fieldset class="field gender-field">
+                        <legend>Gender</legend>
+                        <div class="gender-options">
+                            <label class="radio-pill">
+                                <input type="radio" name="gender" value="Male" required>
+                                <span>Male</span>
+                            </label>
+                            <label class="radio-pill">
+                                <input type="radio" name="gender" value="Female" required>
+                                <span>Female</span>
+                            </label>
+                        </div>
+                        <p class="error-msg">Please select an option.</p>
+                    </fieldset>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <p class="error-msg">Please write your message.</p>
+                    </div>
+
+                    <label class="check-row" for="subscribe">
+                        <input type="checkbox" id="subscribe" name="subscribe">
+                        <span>Get the latest news, exclusive deals, and new product information in your inbox.</span>
+                    </label>
+
+                    <button class="btn btn-primary btn-block" type="submit" id="submit-btn">Send Message</button>
+                    <p class="form-note">Your message opens in your email app, ready to send to the SaffCoz team.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div>
+                    <div class="footer-logo">
+                        <img src="asset/headinglogo.png" alt="SaffCoz logo">
+                        <span class="wordmark">SaffCoz</span>
+                    </div>
+                    <p class="footer-desc">
+                        A premium fragrance boutique — signature scents and world-class
+                        collaborations, since day one.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="productpage.html">Products</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="storelocation.html">Store Locations</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Visit Us</h3>
+                    <ul>
+                        <li><a href="storelocation.html">BINUS Kemanggisan, Jakarta</a></li>
+                        <li><a href="storelocation.html">BINUS Bandung</a></li>
+                        <li><a href="storelocation.html">BINUS Malang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Pre-Order: 0812-3456-7890</p>
+                    <p>Care: 0812-3456-7890</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                            <img src="asset/footer/facebook.png" alt="Facebook"></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                            <img src="asset/footer/instagram.png" alt="Instagram"></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                            <img src="asset/footer/twitter.png" alt="Twitter"></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                            <img src="asset/footer/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 SaffCoz. All rights reserved.</span>
+                <span>Crafted with intention.</span>
             </div>
         </div>
     </footer>
 
+    <script src="javascript/main.js"></script>
+    <script src="javascript/contactus.js"></script>
 </body>
+
 </html>

@@ -4,228 +4,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us — SaffCoz</title>
+    <meta name="description" content="The story of SaffCoz — a premium fragrance boutique built on craftsmanship and collaboration.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/aboutus.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="navbar">
-        <div class="logo">
-            <img src="/asset/headinglogo.png" alt="Logo" />
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="homepage.html" class="nav-logo" aria-label="SaffCoz home">
+                <img src="asset/headinglogo.png" alt="SaffCoz logo">
+                <span class="wordmark">SaffCoz</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
+                    aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="productpage.html">Product</a></li>
+                    <li><a href="storelocation.html">Store</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a class="nav-icon-btn" href="aboutus.html#wishlist" aria-label="Wishlist">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                        <path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="count nav-wish-count">0</span>
+                </a>
+                <button class="nav-icon-btn nav-cart-btn" type="button" aria-label="Open cart">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                        <path d="M6 7h12l1.3 12.2a1.5 1.5 0 0 1-1.5 1.8H6.2a1.5 1.5 0 0 1-1.5-1.8L6 7z" stroke-linejoin="round"/>
+                        <path d="M9 9V6a3 3 0 0 1 6 0v3" stroke-linecap="round"/>
+                    </svg>
+                    <span class="count nav-cart-count">0</span>
+                </button>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="/homepage.html">Home</a></li>
-            <li><a href="/productpage.html">Product</a></li>
-            <li><a href="/storelocation.html">Store</a></li>
-            <li><a href="/aboutus.html">About Us</a></li>
-            <li><a href="/contactus.html">Contact Us</a></li>
-        </ul>
-    </div>
+    </header>
 
-    <!-- body -->
-    <main>
-        <header>
-            <h1>SaffCoz</h1>
-            <p><i>"Fragrance is the silent language of the soul. It speaks when words cannot."</i></p>
-        </header>
+    <main id="main">
+
+        <!-- Hero -->
         <section class="hero">
-            <img src="/asset/aboutus/images_7sw91t3M_Y36XP4.jpg" alt="Hero Image">
-            <h2>RELEASE YOUR SCENT</h2>
-            <p>
-                Unveil the artistry of perfumery through insightful articles, expert advice, and trend updates.
-                From classic to contemporary, find inspiration and elevate your fragrance experience.
-            </p>
-            <div class="cta-buttons">
-                <a href="contactus.html" class="btn">Contact Us</a>
-                <a href="productpage.html" class="btn">Our Product</a>
+            <div class="hero-media">
+                <img src="asset/aboutus/images_7sw91t3M_Y36XP4.jpg" alt="" aria-hidden="true">
+            </div>
+            <div class="container hero-inner">
+                <p class="eyebrow" style="color: var(--brass)">Since the Beginning</p>
+                <h1>SaffCoz</h1>
+                <p class="lede">
+                    &ldquo;Fragrance is the silent language of the soul. It speaks when words cannot.&rdquo;
+                </p>
+                <div class="btn-row">
+                    <a href="contactus.html" class="btn btn-light">Contact Us</a>
+                    <a href="productpage.html" class="btn btn-ghost-light">Our Products</a>
+                </div>
+            </div>
+        </section>
 
+        <!-- Signature scents -->
+        <section class="section container" id="signature">
+            <p class="eyebrow text-center">Signature Scents</p>
+            <h2 class="section-title text-center">Our Signature Scents</h2>
+            <p class="section-sub">Three originals that define the house of SaffCoz.</p>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-media" data-open="saff">
+                        <div class="product-tags"><span class="tag new">New</span></div>
+                        <button class="wish-btn" type="button" data-id="saff" data-name="SaffCoz. — S.O.T.B"
+                            aria-label="Add SaffCoz S.O.T.B to wishlist" aria-pressed="false">
+                            <svg class="heart-outline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z" stroke-linejoin="round"/></svg>
+                            <svg class="heart-fill" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z"/></svg>
+                        </button>
+                        <img src="asset/aboutus/9e3284917896ff9c4d1ba4db57ffdd83.jpg" alt="SaffCoz S.O.T.B perfume bottle">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">SaffCoz</p>
+                        <h3 class="product-name">SaffCoz. — S.O.T.B</h3>
+                        <p class="scent-desc">Sophisticated and refined, with notes of luxurious spices and subtle
+                            floral undertones — elegance and warmth that lingers without overwhelming.</p>
+                        <div class="product-price"><span class="price-now">Rp 380.000</span></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media" data-open="minouet">
+                        <button class="wish-btn" type="button" data-id="minouet" data-name="SaffCoz. — MINOUET"
+                            aria-label="Add SaffCoz MINOUET to wishlist" aria-pressed="false">
+                            <svg class="heart-outline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z" stroke-linejoin="round"/></svg>
+                            <svg class="heart-fill" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z"/></svg>
+                        </button>
+                        <img src="asset/aboutus/minouet.jpeg" alt="SaffCoz MINOUET perfume bottle">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">SaffCoz</p>
+                        <h3 class="product-name">SaffCoz. — MINOUET</h3>
+                        <p class="scent-desc">A delicate, fresh fragrance combining soft florals with a hint of
+                            citrus — grace and lightness for understated, captivating moments.</p>
+                        <div class="product-price"><span class="price-now">Rp 240.000</span></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-media" data-open="maleali">
+                        <div class="product-tags"><span class="tag sale">Sale</span></div>
+                        <button class="wish-btn" type="button" data-id="maleali" data-name="SaffCoz. — MALEALI"
+                            aria-label="Add SaffCoz MALEALI to wishlist" aria-pressed="false">
+                            <svg class="heart-outline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z" stroke-linejoin="round"/></svg>
+                            <svg class="heart-fill" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z"/></svg>
+                        </button>
+                        <img src="asset/aboutus/id-11134207-7r98x-lpf0ard41d3nf9.jpg" alt="SaffCoz MALEALI perfume bottle">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">SaffCoz</p>
+                        <h3 class="product-name">SaffCoz. — MALEALI</h3>
+                        <p class="scent-desc">A bold, modern scent blending woody and musky notes with a touch of
+                            sweetness — contemporary and memorable.</p>
+                        <div class="product-price">
+                            <span class="price-sale">Rp 225.000</span>
+                            <span class="price-old">Rp 450.000</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
-        <section class="signature-scents">
-            <h3>Our Signature Scents</h3>
-            <div class="scents-grid">
-                <div class="scent">
-                    <img src="asset/aboutus/9e3284917896ff9c4d1ba4db57ffdd83.jpg" alt="S.O.T.B perfume">
-                    <h4>SaffCoz. - S.O.T.B</h4>
-                    <p>
-                        Sophisticated and refined, with notes of luxurious spices and subtle floral undertones,
-                        creating an air of elegance and warmth that lingers without overwhelming.
-                    </p>
-                    <p class="price">Rp 380.000</p>
+
+        <!-- History -->
+        <section class="split-band">
+            <div class="container split-inner">
+                <div class="split-media">
+                    <img src="asset/aboutus/4de85956860e3c066893dea8ed6435d1.jpg" alt="Perfume atelier ingredients">
                 </div>
-                <div class="scent">
-                    <img src="asset/aboutus/minouet.jpeg" alt="Minouet perfume">
-                    <h4>SaffCoz. - MINOUET</h4>
-                    <p>
-                        A delicate, fresh fragrance that combines soft florals with a hint of citrus,
-                        evoking a sense of grace and lightness, perfect for those who enjoy understated yet captivating
-                        aromas.
-                    </p>
-                    <p class="price">Rp 240.000</p>
-                </div>
-                <div class="scent">
-                    <img src="asset/aboutus/id-11134207-7r98x-lpf0ard41d3nf9.jpg" alt="Maleali perfume">
-                    <h4>SaffCoz. - MALEALI</h4>
-                    <p>
-                        A bold, modern scent with a blend of woody and musky notes, accented by a touch of sweetness,
-                        making it a perfect choice for those who seek a fragrance that's both contemporary and
-                        memorable.
-                    </p>
-                    <p class="price">Rp 450.000</p>
+                <div class="split-text">
+                    <p class="eyebrow">Featured</p>
+                    <h2 class="section-title">Our History</h2>
+                    <p>Founded with a passion for elegance and craftsmanship, SaffCoz was born from a desire to
+                        create distinctive, high-quality fragrances that evoke emotion and sophistication.</p>
+                    <p>Since its inception, the brand has dedicated itself to blending tradition with innovation,
+                        continuously exploring new and inspiring scent profiles for modern perfumery lovers. Each
+                        bottle tells a story — a testament to our commitment to artistry and excellence.</p>
                 </div>
             </div>
         </section>
-        <section class="about-us">
-            <h2>Featured</h2>
-            <div class="history-section">
-                <img src="asset/aboutus/4de85956860e3c066893dea8ed6435d1.jpg" alt="Featured Image">
-                <div class="history-content">
-                    <h3>OUR HISTORY</h3>
-                    <p>
-                        Founded with a passion for elegance and craftsmanship, SaffCoz was born from a desire to create
-                        distinctive, high-quality fragrances that evoke emotion and sophistication.
-                        Since its inception, the brand has dedicated itself to blending tradition with innovation,
-                        continuously exploring new and inspiring scent profiles to meet the desires of modern perfumery
-                        lovers.
-                        Each bottle tells a story, and every fragrance is a testament to our commitment to artistry and
-                        excellence.
-                    </p>
+
+        <!-- Vision & Mission -->
+        <section class="section container">
+            <p class="eyebrow text-center">What Drives Us</p>
+            <h2 class="section-title text-center">Don&rsquo;t Miss</h2>
+            <div class="vm-grid">
+                <div class="vm-media">
+                    <img src="asset/aboutus/57bd47d826539fc69df152d5f0259d3f.jpg" alt="Vision — ingredients of a fine perfume">
+                </div>
+                <div class="vm-card">
+                    <h3>Vision</h3>
+                    <p>To become a globally recognized fragrance brand known for premium, luxurious perfumes that
+                        inspire confidence and individuality — making fine fragrances accessible while celebrating
+                        the art of perfume, and building lasting connections that elevate everyday moments.</p>
+                </div>
+                <div class="vm-card">
+                    <h3>Mission</h3>
+                    <p>To provide high-quality, unique fragrances that capture the essence of sophistication, with
+                        exceptional customer service and a seamless shopping experience — ensuring every bottle
+                        tells a story and enhances the personal style of our clientele.</p>
+                </div>
+                <div class="vm-media">
+                    <img src="asset/aboutus/e8e271c7f5a2c589a8c690361f119b5d.jpg" alt="Mission — the perfumer's craft">
                 </div>
             </div>
         </section>
-        <section class="about-us">
-            <h2>Don't Miss</h2>
-            <div class="vision-mission">
-                <div class="image1">
-                    <img src="asset/aboutus/57bd47d826539fc69df152d5f0259d3f.jpg" alt="Vision Image">
-                </div>
-                <div class="vision">
-                    <h3>VISION</h3>
-                    <p>
-                        To become a globally recognized fragrance brand known for offering premium, luxurious perfumes
-                        that inspire confidence and individuality. We aim to provide an exceptional olfactory
-                        experience,
-                        making fine fragrances accessible while celebrating the art of perfume. At SaffCoz, we seek to
-                        build a lasting connection with our customers, enhancing their personal style and elevating
-                        everyday moments with every scent.
-                    </p>
-                </div>
-                <div class="mission">
-                    <h3>MISSION</h3>
-                    <p>
-                        At SaffCoz, we are committed to providing our customers with high-quality, unique fragrances
-                        that capture the essence of sophistication. We aim to deliver exceptional customer service and
-                        a seamless online shopping experience, ensuring every bottle tells a story and enhances the
-                        personal style of our clientele.
-                    </p>
-                </div>
-                <div class="image1">
-                    <img src="asset/aboutus/e8e271c7f5a2c589a8c690361f119b5d.jpg" alt="Mission Image">
-                </div>
+
+        <!-- Wishlist -->
+        <section class="section container" id="wishlist">
+            <p class="eyebrow text-center">Saved For Later</p>
+            <h2 class="section-title text-center">Your Wishlist</h2>
+            <p class="section-sub">Fragrances you&rsquo;ve saved, stored on this device.</p>
+            <div id="wishlist-grid" class="product-grid"></div>
+            <div class="empty-state" id="wishlist-empty" hidden>
+                <p class="big">Your wishlist is empty</p>
+                <p>Tap the heart on any fragrance to save it here.</p>
+                <p style="margin-top:20px"><a class="btn btn-outline" href="productpage.html">Browse products</a></p>
             </div>
         </section>
-        <section class="collaborations">
-            <h2>In Collaborations</h2>
-            <div class="collaboration-grid">
-                <div class="collaboration-item">
-                    <img src="asset/aboutus/d3eec660181d490e050a9523ec8ddfac.jpg" alt="Dior Collaboration">
-                    <span class="brand">Dion</span>
+
+        <!-- Collaborations -->
+        <section class="collab-band">
+            <div class="container">
+                <p class="eyebrow text-center">Friends of the House</p>
+                <h2 class="section-title text-center">In Collaborations</h2>
+                <div class="collab-grid">
+                    <figure class="collab-item">
+                        <img src="asset/aboutus/d3eec660181d490e050a9523ec8ddfac.jpg" alt="Dion collaboration">
+                        <figcaption class="brand">Dion</figcaption>
+                    </figure>
+                    <figure class="collab-item">
+                        <img src="asset/aboutus/808d7f8af18f2b61bcc6e7267a8c55d7.jpg" alt="YXL collaboration">
+                        <figcaption class="brand">YXL</figcaption>
+                    </figure>
+                    <figure class="collab-item">
+                        <img src="asset/aboutus/9ff8c785aa6aa8a23212a48471fed976.jpg" alt="Atkindaughter collaboration">
+                        <figcaption class="brand">Atkindaughter</figcaption>
+                    </figure>
                 </div>
-                <div class="collaboration-item">
-                    <img src="asset/aboutus/808d7f8af18f2b61bcc6e7267a8c55d7.jpg" alt="YSL Collaboration">
-                    <span class="brand">YXL</span>
-                </div>
-                <div class="collaboration-item">
-                    <img src="asset/aboutus/9ff8c785aa6aa8a23212a48471fed976.jpg" alt="Atkinson Collaboration">
-                    <span class="brand">Atkindaughter</span>
-                </div>
-            </div>
-            <h3>OVER 20 SIGNATURE SCENT & 16 COLLABORATION</h3>
-            <div class="collaboration-brands">
-                <div class="brand-list">
-                    <ul>
-                        <li>SaffCoz.</li>
-                        <li>Atkindaughter</li>
-                        <li>Crud</li>
-                        <li>Tom Mustang</li>
-                    </ul>
-                </div>
-                <div class="brand-list">
-                    <ul>
-                        <li>Scentminus</li>
-                        <li>Guerloan</li>
-                        <li>Hismès</li>
-                        <li>Maidaughter England Kurkdjoan</li>
-                    </ul>
-                </div>
-                <div class="brand-list">
-                    <ul>
-                        <li>Bullgarry</li>
-                        <li>Clive Febrian</li>
-                        <li>Amogus</li>
-                        <li>Fragrance Nation</li>
-                    </ul>
-                </div>
-                <div class="brand-list">
-                    <ul>
-                        <li>YXL</li>
-                        <li>Aremoney</li>
-                        <li>Kylian</li>
-                        <li>Davidon</li>
-                    </ul>
-                </div>
+                <p class="collab-count">Over 20 signature scents &amp; 16 collaborations</p>
+                <ul class="brand-wall" aria-label="Collaboration brands">
+                    <li>SaffCoz.</li><li>Atkindaughter</li><li>Crud</li><li>Tom Mustang</li>
+                    <li>Scentminus</li><li>Guerloan</li><li>Hismès</li><li>Maidaughter England Kurkdjoan</li>
+                    <li>Bullgarry</li><li>Clive Febrian</li><li>Amogus</li><li>Fragrance Nation</li>
+                    <li>YXL</li><li>Aremoney</li><li>Kylian</li><li>Davidon</li>
+                </ul>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="/asset/headinglogo.png" alt="Footer Logo">
-                <p>SaffCoz</p>
-            </div>
-            <div class="footer-section">
-                <h3>Learn More</h3>
-                <ul>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="storelocation.html">Locations</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>E-Commerce</h3>
-                <ul>
-                    <li><a href="#">Tokopee</a></li>
-                    <li><a href="#">Shopedia</a></li>
-                    <li><a href="#">Lazanya</a></li>
-                    <li><a href="#">Openlapak</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Pre-Order: 081234567890</p>
-                <p>Complains: 081234567890</p>
-            </div>
-            <div class="footer-section">
-                <h3>Social</h3>
-                <div class="social-icons">
-                    <a href target="_blank" class="icon">
-                        <img src="/asset/footer/facebook.png" alt="Facebook">
-                    </a>
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/instagram.png" alt="Instagram">
-                    </a>
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/twitter.png" alt="Twitter">
-                    </a>
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/youtube.png" alt="YouTube">
-                    </a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div>
+                    <div class="footer-logo">
+                        <img src="asset/headinglogo.png" alt="SaffCoz logo">
+                        <span class="wordmark">SaffCoz</span>
+                    </div>
+                    <p class="footer-desc">
+                        A premium fragrance boutique — signature scents and world-class
+                        collaborations, since day one.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="productpage.html">Products</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="storelocation.html">Store Locations</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Visit Us</h3>
+                    <ul>
+                        <li><a href="storelocation.html">BINUS Kemanggisan, Jakarta</a></li>
+                        <li><a href="storelocation.html">BINUS Bandung</a></li>
+                        <li><a href="storelocation.html">BINUS Malang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Pre-Order: 0812-3456-7890</p>
+                    <p>Care: 0812-3456-7890</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                            <img src="asset/footer/facebook.png" alt="Facebook"></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                            <img src="asset/footer/instagram.png" alt="Instagram"></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                            <img src="asset/footer/twitter.png" alt="Twitter"></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                            <img src="asset/footer/youtube.png" alt="YouTube"></a>
+                    </div>
                 </div>
             </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 SaffCoz. All rights reserved.</span>
+                <span>Crafted with intention.</span>
+            </div>
         </div>
-    </div>
+    </footer>
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/products.js"></script>
+    <script src="javascript/aboutus.js"></script>
 </body>
+
 </html>

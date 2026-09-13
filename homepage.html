@@ -4,160 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="/css/homepage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMr3/ksGZrDz3Vxz9VjB1rYr36N/AZgZZpgi3D" crossorigin="anonymous">
+    <title>SaffCoz — Fine Fragrances</title>
+    <meta name="description" content="SaffCoz — a premium fragrance boutique. Signature scents, world-class collaborations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/homepage.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="navbar">
-        <div class="logo">
-            <img src="/asset/headinglogo.png" alt="Logo" />
-        </div>
-        <ul class="nav-links">
-            <li><a href="/homepage.html">Home</a></li>
-            <li><a href="/productpage.html">Product</a></li>
-            <li><a href="/storelocation.html">Store</a></li>
-            <li><a href="/aboutus.html">About Us</a></li>
-            <li><a href="/contactus.html">Contact Us</a></li>
-        </ul>
-    </header>
-
-    <div class="body-container">
-        <!-- New Arrivals Section -->
-        <section class="section new-arrivals">
-            <h2>New Arrivals</h2>
-            <div class="product-grid">
-                <div class="product-item">
-                    <img src="/asset/homepage/saffcozsaff.jpeg" alt="New Arrival 1">
-                </div>
-                <div class="product-item">
-                    <img src="/asset/homepage/laspozaz.jpeg" alt="New Arrival 2">
-                </div>
-                <div class="product-item">
-                    <img src="/asset/homepage/troupe.jpeg" alt="New Arrival 3">
-                </div>
-            </div>
-        </section>
-
-        <!-- Best Seller and Discounts Section -->
-        <section class="section product-highlight">
-            <div class="highlight-item">
-                <h2>Best Seller</h2>
-                <div class="highlight-image">
-                    <img src="/asset/homepage/minouet.jpeg" alt="Best Seller">
-                </div>
-            </div>
-            <div class="highlight-item">
-                <h2>Discounts</h2>
-                <div class="highlight-image">
-                    <img src="/asset/homepage/maleali.jpg" alt="Discount">
-                    <div class="discount-badge">50% OFF</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Other Products Section -->
-        <section class="section other-products">
-            <h2>Other Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="badge new">New</div>
-                    <img src="/asset/homepage/saff-co-1850-9815093-3.jpeg" alt="SaffCoz. - SAFF">
-                    <p class="product-title">SaffCoz. - SAFF</p>
-                    <p class="product-price">Rp 215.500</p>
-                </div>
-                <div class="product-card">
-                    <div class="badge sale">Sales</div>
-                    <img src="/asset/homepage/christian-dior-5709-7809932-1.jpeg" alt="Dion Sauvage">
-                    <p class="product-title">Dion Sauvage</p>
-                    <p class="product-price">
-                        <span class="sale-price">Rp 1.340.000</span>
-                        <span class="original-price">Rp 2.000.000</span>
-                    </p>
-                </div>
-                <div class="product-card">
-                    <img src="/asset/homepage/davidoff-0846-7354993-1.jpeg" alt="Davidon Coolwater Man">
-                    <p class="product-title">Davidon Coolwater Man</p>
-                    <p class="product-price">Rp 780.000</p>
-                </div>
-                <div class="product-card">
-                    <img src="/asset/homepage/carolina-herrera-7538-2375174-2.jpeg" alt="212 VIP Black Man EDP">
-                    <p class="product-title">212 VIP Black Man EDP</p>
-                    <p class="product-price">Rp 1.374.000</p>
-                </div>
-                <div class="product-card">
-                    <div class="badge new">New</div>
-                    <img src="/asset/homepage/bvlgari-2276-9256244-1.jpeg" alt="Bullgarry Pour Homme Man">
-                    <p class="product-title">Bullgarry Pour Homme Man</p>
-                    <p class="product-price">Rp 1.648.000</p>
-                </div>
-                <div class="product-card">
-                    <div class="badge sale">Sales</div>
-                    <img src="/asset/homepage/fragrance-world-5870-8530844-1.jpeg" alt="Jasmine Noir Pour Femme">
-                    <p class="product-title">Jasmine Noir Pour Femme</p>
-                    <p class="product-price">
-                        <span class="sale-price">Rp 285.000</span>
-                        <span class="original-price">Rp 550.000</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="/asset/headinglogo.png" alt="Footer Logo">
-                <p>SaffCoz</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Learn More</h3>
-                <ul>
+        <div class="container navbar-inner">
+            <a href="homepage.html" class="nav-logo" aria-label="SaffCoz home">
+                <img src="asset/headinglogo.png" alt="SaffCoz logo">
+                <span class="wordmark">SaffCoz</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
+                    aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="productpage.html">Product</a></li>
+                    <li><a href="storelocation.html">Store</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="storelocation.html">Locations</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
+            </nav>
+            <div class="nav-actions">
+                <a class="nav-icon-btn" href="aboutus.html#wishlist" aria-label="Wishlist" id="nav-wish-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                        <path d="M12 21s-7.5-4.7-9.7-9C.8 9 2.4 5.5 5.7 5.1c2-.3 3.9.8 4.8 2.5h3c.9-1.7 2.8-2.8 4.8-2.5 3.3.4 4.9 3.9 3.4 6.9-2.2 4.3-9.7 9-9.7 9z" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="count nav-wish-count">0</span>
+                </a>
+                <button class="nav-icon-btn nav-cart-btn" type="button" aria-label="Open cart">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                        <path d="M6 7h12l1.3 12.2a1.5 1.5 0 0 1-1.5 1.8H6.2a1.5 1.5 0 0 1-1.5-1.8L6 7z" stroke-linejoin="round"/>
+                        <path d="M9 9V6a3 3 0 0 1 6 0v3" stroke-linecap="round"/>
+                    </svg>
+                    <span class="count nav-cart-count">0</span>
+                </button>
             </div>
+        </div>
+    </header>
 
-            <div class="footer-section">
-                <h3>E-Commerce</h3>
-                <ul>
-                    <li><a href="#">Tokopee</a></li>
-                    <li><a href="#">Shopedia</a></li>
-                    <li><a href="#">Lazanya</a></li>
-                    <li><a href="#">Openlapak</a></li>
-                </ul>
+    <main id="main">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-media">
+                <img src="asset/homepage/saffcozsaff.jpeg" alt="" aria-hidden="true">
             </div>
-
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Pre-Order: 081234567890</p>
-                <br>
-                <p>Complains: 081234567890</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Social</h3>
-                <div class="social-icons">
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/facebook.png" alt="Facebook">
-                    </a>
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/instagram.png" alt="Instagram">
-                    </a>
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/twitter.png" alt="Twitter">
-                    </a>
-                    <a href="#" target="_blank" class="icon">
-                        <img src="/asset/footer/youtube.png" alt="YouTube">
-                    </a>
+            <div class="container hero-inner">
+                <p class="eyebrow" style="color: var(--brass)">The Art of Scent</p>
+                <h1>Release Your Scent</h1>
+                <p class="lede">
+                    Discover fragrances crafted with intention — from signature exclusives to
+                    collaborations with the world&rsquo;s most celebrated perfume houses.
+                </p>
+                <div class="btn-row">
+                    <a href="productpage.html" class="btn btn-light">Explore the Collection</a>
+                    <a href="aboutus.html" class="btn btn-ghost-light">Our Story</a>
                 </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="section container">
+            <p class="eyebrow text-center">Just Landed</p>
+            <h2 class="section-title text-center">New Arrivals</h2>
+            <p class="section-sub">The latest additions to the SaffCoz collection.</p>
+            <div class="product-grid" id="new-arrivals-grid"></div>
+        </section>
+
+        <!-- Editorial split: Best Seller + Discount -->
+        <section class="highlight-band">
+            <div class="container highlight-inner">
+                <div class="highlight-cell">
+                    <img src="asset/homepage/minouet.jpeg" alt="SaffCoz Minouet — best seller">
+                </div>
+                <div class="highlight-cell highlight-text">
+                    <p class="eyebrow">Best Seller</p>
+                    <h2 class="section-title">SaffCoz. — Minouet</h2>
+                    <p class="lede">A delicate, fresh fragrance combining soft florals with a hint of citrus —
+                        grace in a bottle, and our most-loved scent this season.</p>
+                    <p class="highlight-price">Rp 240.000</p>
+                    <a href="aboutus.html#signature" class="btn btn-outline">Discover Minouet</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="highlight-band alt">
+            <div class="container highlight-inner reverse">
+                <div class="highlight-cell highlight-text">
+                    <p class="eyebrow">Season Sale</p>
+                    <h2 class="section-title">Up to 50% Off</h2>
+                    <p class="lede">Selected fragrances from our collaboration houses — including
+                        SaffCoz. — Maleali, now at Rp 225.000.</p>
+                    <a href="productpage.html?filter=sale" class="btn btn-primary">Shop the Sale</a>
+                </div>
+                <div class="highlight-cell">
+                    <img src="asset/homepage/maleali.jpg" alt="SaffCoz Maleali — on sale">
+                </div>
+            </div>
+        </section>
+
+        <!-- Other products -->
+        <section class="section container">
+            <p class="eyebrow text-center">The Collection</p>
+            <h2 class="section-title text-center">Other Products</h2>
+            <p class="section-sub">Every bottle in our current line-up, ready to ship.</p>
+            <div class="product-grid" id="all-products-grid"></div>
+            <p class="text-center" style="margin-top: 36px">
+                <a href="productpage.html" class="btn btn-outline">View All Products</a>
+            </p>
+        </section>
+
+        <!-- Quote band -->
+        <section class="quote-band">
+            <div class="container">
+                <p>&ldquo;Fragrance is the silent language of the soul. It speaks when words cannot.&rdquo;</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div>
+                    <div class="footer-logo">
+                        <img src="asset/headinglogo.png" alt="SaffCoz logo">
+                        <span class="wordmark">SaffCoz</span>
+                    </div>
+                    <p class="footer-desc">
+                        A premium fragrance boutique — signature scents and world-class
+                        collaborations, since day one.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="productpage.html">Products</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="storelocation.html">Store Locations</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Visit Us</h3>
+                    <ul>
+                        <li><a href="storelocation.html">BINUS Kemanggisan, Jakarta</a></li>
+                        <li><a href="storelocation.html">BINUS Bandung</a></li>
+                        <li><a href="storelocation.html">BINUS Malang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Pre-Order: 0812-3456-7890</p>
+                    <p>Care: 0812-3456-7890</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                            <img src="asset/footer/facebook.png" alt="Facebook"></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                            <img src="asset/footer/instagram.png" alt="Instagram"></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                            <img src="asset/footer/twitter.png" alt="Twitter"></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                            <img src="asset/footer/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 SaffCoz. All rights reserved.</span>
+                <span>Crafted with intention.</span>
             </div>
         </div>
     </footer>
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/products.js"></script>
+    <script src="javascript/homepage.js"></script>
 </body>
 
 </html>
