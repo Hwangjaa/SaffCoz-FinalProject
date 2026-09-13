@@ -20,7 +20,7 @@ concretely, not just mentioned as a theory.
 9. [State & Data](#state--data)
 10. [Known Limitations](#known-limitations)
 11. [Assets & Credits](#assets--credits)
-12. [Team](#team)
+12. [Author](#author)
 
 ---
 
@@ -371,13 +371,13 @@ These are deliberate and stated honestly rather than hidden behind fake UI:
 
 ---
 
-## Team
+## Author
+
+This is an individual project — designed, built and documented by a single student.
 
 | Name | Student ID | Role |
 | --- | --- | --- |
-| _&lt;member 1&gt;_ | _&lt;NIM&gt;_ | _&lt;role&gt;_ |
-| _&lt;member 2&gt;_ | _&lt;NIM&gt;_ | _&lt;role&gt;_ |
-| _&lt;member 3&gt;_ | _&lt;NIM&gt;_ | _&lt;role&gt;_ |
+| Rafael Yudianto | 2602052153 | Design, front-end implementation, documentation |
 
 **Course:** Human Computer Interaction — Final Project
 **Institution:** BINUS University
